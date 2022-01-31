@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Meme Component
+// Shows the image along with text on top of it
 const Meme = ({imgUrl, upperText, lowerText}) => {
     return (
         <div style={{ position: "relative", color: 'white', marginBottom: 15}}>

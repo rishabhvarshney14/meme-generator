@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 
+// Buttons Component
+// this include buttons like Save and Generate
 const Buttons = ({memes, setImgUrl, upperText, lowerText, currMeme}) => {
     const [memeId, setMemeId] = useState(currMeme !== undefined ? currMeme.id : '')
     const [savedUrl, setSavedUrl] = useState('')
     const [isSaved, setIsSaved] = useState(false)
 
+    // Function to generate new meme image
     const generateMeme = () => {
         const idx = Math.floor((Math.random() * memes.length));
         const url = memes[idx].url;
@@ -14,11 +17,13 @@ const Buttons = ({memes, setImgUrl, upperText, lowerText, currMeme}) => {
         setIsSaved(false)
     }
 
+    // Function to call API and create a new meme with the provided text
     const saveMeme = () => {
         const data = new FormData();
         data.append("template_id", memeId)
-        data.append('username', 'rishvars2512')
-        data.append("password", 'HME#52!-L8nmLsB')
+        // imgflip username and password is required here
+        data.append('username', '')
+        data.append("password", '')
         data.append("text0", upperText)
         data.append("text1", lowerText)
 
@@ -52,6 +57,7 @@ const Buttons = ({memes, setImgUrl, upperText, lowerText, currMeme}) => {
                 <button type="button" className="btn btn-secondary btn-lg" onClick={generateMeme}>Generate New</button>
             </div>
 
+            {/* Url of the saved meme will only be seen when you saved a meme  */}
             {isSaved && (
                 <div>
                     <form className='form-inline' style={{maxWidth: '50%'}}>

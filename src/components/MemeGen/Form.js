@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Form Component
+// Contains two field i.e for upperText and lowerText
 const Form = ({upperText, setUpperText, lowerText, setLowerText}) => {
     return (
         <>

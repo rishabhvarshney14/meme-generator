@@ -1,5 +1,6 @@
 import React from 'react';
 
+// NavBar Component
 const Navbar = () => {
     return (
         <div className="text-center">

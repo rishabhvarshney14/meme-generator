@@ -3,12 +3,15 @@ import Buttons from './Buttons';
 import Form from './Form';
 import Meme from './Meme';
 
+// MemeGen Component 
+// Contains the required fields, meme and the related buttons
 const MemeGen = () => {
     const [upperText, setUpperText] = useState('');
     const [lowerText, setLowerText] = useState('');
     const [imgUrl, setImgUrl] = useState('https://i.imgflip.com/63coik.jpg');
     const [allMemes, setAllMemes] = useState([]);
 
+    // Fetch Data from API
     useEffect(() => {
         const fetchData = () => {
             fetch("https://api.imgflip.com/get_memes")
