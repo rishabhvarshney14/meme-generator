@@ -38,7 +38,7 @@ const Buttons = ({memes, setImgUrl, upperText, lowerText, currMeme, imgUrl}) => 
         }
         const id = await saveMeme(currentUser.email, url, upperText, lowerText);
         setIsSaved(true)
-        setSavedUrl('https://stoic-bhaskara-e37613.netlify.app/' + id)
+        setSavedUrl('https://stoic-bhaskara-e37613.netlify.app/meme/' + id)
     }
 
     return (
