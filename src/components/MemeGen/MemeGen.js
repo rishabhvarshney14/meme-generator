@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+
 import Buttons from './Buttons';
 import Form from './Form';
-import Meme from './Meme';
+import Meme from '../Meme';
 
 // MemeGen Component 
 // Contains the required fields, meme and the related buttons
@@ -39,6 +40,7 @@ const MemeGen = () => {
 
             {allMemes && <Buttons 
                 memes={allMemes} 
+                imgUrl={imgUrl}
                 setImgUrl={setImgUrl} 
                 upperText={upperText} 
                 lowerText={lowerText} 
