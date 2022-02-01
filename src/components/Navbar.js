@@ -24,9 +24,9 @@ const Navbar = () => {
             <div>
                 {authenticated ? (
                     <>
-                        <Link to='/'>My Memes</Link>
+                        <Link to='/memes'>My Memes</Link>
                         <span> | </span>
-                        <a target="_blank" rel="noopener noreferrer" onClick={handleLogut}>Logout</a>
+                        <a href='/' onClick={handleLogut}>Logout</a>
                     </> 
                 ): (
                     <>

@@ -9,6 +9,7 @@ import MemeGen from './components/MemeGen/MemeGen'
 import Login from './components/authentication/Login';
 import Signin from './components/authentication/Signin';
 import SingleMeme from './components/SingleMeme';
+import UserMemes from './components/UserMemes';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route element={<MemeGen />} path="/" exact/>
               <Route element={<Login />} path='/login' />
               <Route element={<Signin />} path='/signin' />
+              <Route element={<UserMemes />} path='/memes' />
               <Route element={<SingleMeme />} path='/meme/:id' />
             </Routes>
           </Router>
